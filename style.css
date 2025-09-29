@@ -1,112 +1,240 @@
-/* Global Styles */
+/* ------------------- */
+/* Custom Properties   */
+/* ------------------- */
+:root {
+  --primary-bg: #ffffff;
+  --secondary-bg: #f9f9fb;
+  --text-primary: #1a1a1a;
+  --text-secondary: #5c5c5c;
+  --accent-color: #007bff;
+  --accent-hover: #0056b3;
+  --border-color: #e0e0e0;
+  --gradient-accent: linear-gradient(135deg, #007bff, #00c6ff);
+
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+}
+
+/* ------------------- */
+/* Global Styles       */
+/* ------------------- */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #121212;
-  color: #e0e0e0;
-  margin: 0;
-  padding: 0;
+  font-family: var(--font-family-sans);
+  background: var(--secondary-bg);
+  color: var(--text-primary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 0 1.5rem;
 }
 
-/* Container Width */
-main, header, footer {
-  width: 90%;
-  max-width: 900px;
-  margin: 20px 0;
+/* Smooth fade-in for page load */
+body {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
 }
 
-/* Header */
-header {
-  text-align: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #333;
-}
-
-header h1 {
-  font-size: 2.2rem;
-  color: #bb86fc;
-  margin-bottom: 0.3rem;
-}
-
-header p {
-  color: #aaa;
-  font-size: 1rem;
-}
-
-/* Sections */
-section {
-  background-color: #1e1e1e;
-  padding: 30px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: 1px solid #2a2a2a;
-}
-
-h2 {
-  font-size: 1.4rem;
-  color: #03dac6;
-  border-bottom: 1px solid #333;
-  padding-bottom: 8px;
-  margin-bottom: 15px;
-}
-
-/* Project Grid */
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-@media (min-width: 700px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }
 
-/* Project Cards */
-.project-card {
-  background-color: #2a2a2a;
-  padding: 20px;
-  border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* ------------------- */
+/* Layout & Containers */
+/* ------------------- */
+header, section, footer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+/* ------------------- */
+/* Typography          */
+/* ------------------- */
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.project-card h3 {
-  margin-top: 0;
-  color: #ffffff;
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
 }
 
-.project-card p {
-  color: #bdbdbd;
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-accent);
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+
+/* ------------------- */
+/* Links               */
+/* ------------------- */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+}
+
+a:hover, a:focus {
+  color: var(--accent-hover);
+  text-decoration: none;
+}
+
+/* ------------------- */
+/* Header              */
+/* ------------------- */
+header {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+/* ------------------- */
+/* Footer              */
+/* ------------------- */
+footer {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+footer p {
+  margin-bottom: 0.75rem;
   font-size: 0.95rem;
 }
 
-/* Links */
-a {
-  color: #bb86fc;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+footer a {
+  margin: 0 0.6rem;
+  position: relative;
 }
 
-a:hover {
-  color: #ffffff;
-  text-decoration: underline;
+footer a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background: var(--gradient-accent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  border-top: 1px solid #333;
-  font-size: 0.9em;
-  color: #888;
+footer a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ------------------- */
+/* Projects Section    */
+/* ------------------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.project-card {
+  background: var(--primary-bg);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--gradient-accent);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.project-card:hover::before {
+  opacity: 0.08;
+}
+
+.project-card * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.project-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.project-card p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.project-card a {
+  font-weight: 600;
+  display: inline-block;
+  background: var(--gradient-accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: transform 0.2s ease;
+}
+
+.project-card a:hover {
+  transform: translateY(-2px);
+}
+
+/* ------------------- */
+/* Responsive Design   */
+/* ------------------- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
 }
