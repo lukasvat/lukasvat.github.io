@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lukas Vatistas | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
 </head>
 <body>
 
   <!-- Header -->
-  <header>
+  <header style="line-height: 1.1;">
     <h1 style="margin-bottom: 0;">Lukas Vatistas</h1>
     <p style="margin-top: 0;">Computer Science Student at Indiana University</p>
   </header>
@@ -49,27 +50,35 @@
     <!-- Projects Section -->
     <section id="projects">
       <h2>Projects</h2>
-      <div class="project-grid">
+      <div>
         <div class="project-card">
           <h3>Project One</h3>
           <p>A brief description of your first project. Highlight the problem it solves and technologies used.</p>
           <a href="#">View on GitHub →</a>
         </div>
         <div class="project-card">
-          <h3>Project Two</h3>
-          <p>A brief description of your second project. Emphasize your role and key outcomes.</p>
-          <a href="#">View on GitHub →</a>
+          <div style="line-height: 0.5;">
+            <h3 style>Marble Maze Mobile</h3>
+            <small>Swift - Xcode</small>
+          </div>
+
+          <p>
+            <strong>Marble Maze Mobile</strong> is a 2D labyrinth game for iOS where players use intuitive <strong>
+            tilt controls</strong> to navigate a ball through a maze. This project showcases a clean <strong>
+            Model-View-Controller (MVC)</strong> architecture and integrates key Apple frameworks to deliver a
+            complete user experience. <strong>CoreMotion</strong> is leveraged to translate the
+            device's physical tilt into in-game movement, while <strong>SpriteKit</strong>
+            powers the 2D graphics, animation, and physics-based collision detection. For
+            robust data persistence, <strong>Core Data</strong> is implemented to save all player statistics,
+            high scores, and <strong>customization settings</strong>, ensuring a continuous and personalized
+            experience across sessions.
+          </p>
+          <a href="https://github.com/lukasvat/Marble-Maze-Mobile.git">View on GitHub →</a>
         </div>
         <div class="project-card">
           <h3>Project Three</h3>
           <p>A brief description of your third project. Share what you learned while building it.</p>
           <a href="#">View on GitHub →</a>
-        </div>
-          <div class="project-card">
-          <h3>Project Four</h3>
-          <p>A brief description of your fourth project. Share what you enjoyed while building it.</p>
-          <a href="#">View on GitHub →</a>
-        </div>
       </div>
     </section>
   </main>

@@ -73,7 +73,7 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin: 10px 5px;
   position: relative;
   display: inline-block;
 }
@@ -158,12 +158,6 @@ footer a:hover::after {
 /* ------------------- */
 /* Projects Section    */
 /* ------------------- */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  width: 100%;
-}
 
 .project-card {
   background: var(--primary-bg);
@@ -173,6 +167,7 @@ footer a:hover::after {
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .project-card::before {
