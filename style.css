@@ -36,7 +36,7 @@ body {
   min-height: 100vh;
   padding: 0 1.5rem;
   
-  background-image: url('images/IU-Photo-2.jpg');
+  background-image: url('Images/IU-Photo-2.jpg');
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
