@@ -4,21 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lukas Vatistas | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="Images/favicon-lv.jpg">
   <link rel="stylesheet" href="style.css">
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
 </head>
 <body>
 
   <!-- Header -->
-  <header style="line-height: 1.1;">
-    <h1 style="margin-bottom: 0;">Lukas Vatistas</h1>
-    <p style="margin-top: 0;">Computer Science Student at Indiana University</p>
+  <header class="main-card-1" style="padding-top: 5px; padding-bottom: 5px; margin-top: 15px">
+    <h1 style="margin-bottom: 0; color: white; line-height: 1.1;">Lukas Vatistas</h1>
+    <p style="margin-top: 0; color: white;">Computer Science Student at Indiana University<br>
+      <a href="mailto:lukasdvat@gmail.com">lukasdvat@gmail.com</a> · 
+      <a href="tel:+13172922211">(317) 292-2211</a> · 
+      <a href="https://www.linkedin.com/in/lukas-d-vatistas" target="_blank">LinkedIn</a>
+    </p>
   </header>
 
   <!-- Main Content -->
   <main>
-    <!-- About Section -->
-    <section id="about">
+    <div style="display:flex">
+      <!-- About Section -->
+    <section id="about" style="margin-right: 10px; max-width: 510px; font-size: 20px;" class="main-card-1">
       <h2>About Me</h2>
       <p>
         I’m a senior at Indiana University Bloomington, majoring in Computer Science with a specialization
@@ -29,31 +35,45 @@
     </section>
 
     <!-- Skills Section-->
-    <section id="about">
+    <section id="about" style="margin-left: 10px; max-width: 510px;" class="main-card-1">
       <h2>Technical Skills</h2>
       <p>
         <ul>
-          <strong>Languages</strong>
+          <strong style="font-size: 18px;">Languages</strong>
           <li>
-            Java, Python, JavaScript, Swift, HTML, CSS, PHP,  R
+            Java, Python, SQL, PHP, JavaScript, Swift, HTML/CSS, R
           </li>
         </ul>
         <ul>
-          <strong>Platforms</strong>
+          <strong style="font-size: 18px;">Tools/Platforms</strong>
           <li>
-            IntelliJ, PhpStorm, PyCharm, Visual Studio, Xcode, RStudio, Git, MS Azure, MS Excel, MS PowerPoint, MS Access
+            Git, GitHub/GitLab/Azure DevOps, PhpStorm, Pycharm, IntelliJ, Xcode, RStudio, SSMS
+          </li>
+        </ul>
+        <ul>
+          <strong style="font-size: 18px;">Framworks/Libraries</strong>
+          <li>
+            Spring Boot, Chart.js, SpriteKit, CoreMotion
+          </li>
+        </ul>
+        <ul>
+          <strong style="font-size: 18px;">Databases/Cloud</strong>
+          <li>
+             SQL Server, Microsoft Azure, PostgreSQL
           </li>
         </ul>
       </p>
     </section>
+    </div>
+    
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="main-card-1">
       <h2>Projects</h2>
       <div>
         <div class="project-card">
           <h3>Project One</h3>
-          <p>A brief description of your first project. Highlight the problem it solves and technologies used.</p>
+          <p>Coming soon...</p>
           <a href="#">View on GitHub →</a>
         </div>
         <div class="project-card">
@@ -77,22 +97,10 @@
         </div>
         <div class="project-card">
           <h3>Project Three</h3>
-          <p>A brief description of your third project. Share what you learned while building it.</p>
+          <p>Coming Soon...</p>
           <a href="#">View on GitHub →</a>
       </div>
     </section>
   </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>📬 Get in touch:</p>
-    <p>
-      <a href="mailto:lukasdvat@gmail.com">lukasdvat@gmail.com</a> · 
-      <a href="tel:+13172922211">(317) 292-2211</a> · 
-      <a href="https://www.linkedin.com/in/lukas-d-vatistas" target="_blank">LinkedIn</a>
-    </p>
-    <p>&copy; 2025 Lukas Vatistas</p>
-  </footer>
-
 </body>
 </html>
