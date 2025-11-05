@@ -22,48 +22,48 @@
 
   <!-- Main Content -->
   <main>
-    <div style="display:flex">
+    <div style="display:flex; max-width:1165px; gap:20px;">
       <!-- About Section -->
-    <section id="about" style="margin-right: 10px; max-width: 510px; font-size: 20px;" class="main-card-1">
-      <h2>About Me</h2>
-      <p>
-        I’m a senior at Indiana University Bloomington, majoring in Computer Science with a specialization
-        in Software Engineering and a minor in Business. My academic and personal journey has sparked a
-        strong passion for artificial intelligence and software development, and I’m driven by the potential
-        of technology to solve real-world challenges and improve everyday experiences.
-      </p>
-    </section>
+      <section id="about" class="main-card-1">
+        <h2>About Me</h2>
+        <p style="font-size: 20px;">
+          I’m a senior at Indiana University Bloomington, majoring in Computer Science with a specialization
+          in Software Engineering and a minor in Business. My academic and personal journey has sparked a
+          strong passion for artificial intelligence and software development, and I’m driven by the potential
+          of technology to solve real-world challenges and improve everyday experiences.
+        </p>
+      </section>
 
-    <!-- Skills Section-->
-    <section id="about" style="margin-left: 10px; max-width: 510px;" class="main-card-1">
-      <h2>Technical Skills</h2>
-      <p>
-        <ul>
-          <strong style="font-size: 18px;">Languages</strong>
-          <li>
-            Java, Python, SQL, PHP, JavaScript, Swift, HTML/CSS, R
-          </li>
-        </ul>
-        <ul>
-          <strong style="font-size: 18px;">Tools/Platforms</strong>
-          <li>
-            Git, GitHub/GitLab/Azure DevOps, PhpStorm, Pycharm, IntelliJ, Xcode, RStudio, SSMS
-          </li>
-        </ul>
-        <ul>
-          <strong style="font-size: 18px;">Framworks/Libraries</strong>
-          <li>
-            Spring Boot, Chart.js, SpriteKit, CoreMotion
-          </li>
-        </ul>
-        <ul>
-          <strong style="font-size: 18px;">Databases/Cloud</strong>
-          <li>
-             SQL Server, Microsoft Azure, PostgreSQL
-          </li>
-        </ul>
-      </p>
-    </section>
+      <!-- Skills Section-->
+      <section id="about" class="main-card-1">
+        <h2>Technical Skills</h2>
+        <p>
+          <ul>
+            <strong style="font-size: 18px;">Languages</strong>
+            <li>
+              Java, Python, SQL, PHP, JavaScript, C#, Swift, HTML/CSS, R
+            </li>
+          </ul>
+          <ul>
+            <strong style="font-size: 18px;">Tools/Platforms</strong>
+            <li>
+              Git, GitHub/GitLab/Azure DevOps, PhpStorm, Pycharm, IntelliJ, Xcode, RStudio, SSMS, Unity, Unreal
+            </li>
+          </ul>
+          <ul>
+            <strong style="font-size: 18px;">Framworks/Libraries</strong>
+            <li>
+              Spring Boot, Chart.js, SpriteKit, CoreMotion
+            </li>
+          </ul>
+          <ul>
+            <strong style="font-size: 18px;">Databases/Cloud</strong>
+            <li>
+              SQL Server, Microsoft Azure, PostgreSQL
+            </li>
+          </ul>
+        </p>
+      </section>
     </div>
     
 
@@ -71,17 +71,35 @@
     <section id="projects" class="main-card-1">
       <h2>Projects</h2>
       <div>
+        <!-- Project 1 -->
         <div class="project-card">
           <h3>Project One</h3>
           <p>Coming soon...</p>
           <a href="#">View on GitHub →</a>
         </div>
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div style="line-height: 0.5;">
+            <h3>Midnight Snack</h3>
+            <Small>C# - Unity</Small>
+          </div>
+          <p>
+              <strong>Midnight Snack</strong> is a <strong>3D first-person horror game</strong>
+              that transforms a late-night gas station visit into a terrifying experience by employing a <strong>low-poly dark
+              realism art style</strong> to build suspense and an unsettling atmosphere.
+              The project heavily utilizes <strong>scripted events with conditionals and event counters</strong> 
+              to drive the linear horror sequence. Core technical features include a robust <strong>first-person
+              player controller with WASD movement</strong> and the implementation of <strong>interactive game
+              objects</strong>. The climax involves creating a monster with pathfinder AI for the final chase sequence.
+          </p>
+          <a href="https://github.com/lukasvat/MidnightSnack.git" target="_blank">View on GitHub →</a>
+        </div>
+        <!-- Project 3 -->
         <div class="project-card">
           <div style="line-height: 0.5;">
             <h3 style>Marble Maze Mobile</h3>
             <small>Swift - Xcode</small>
           </div>
-
           <p>
             <strong>Marble Maze Mobile</strong> is a 2D labyrinth game for iOS where players use intuitive <strong>
             tilt controls</strong> to navigate a ball through a maze. This project showcases a clean <strong>
@@ -93,13 +111,8 @@
             high scores, and <strong>customization settings</strong>, ensuring a continuous and personalized
             experience across sessions.
           </p>
-          <a href="https://github.com/lukasvat/Marble-Maze-Mobile.git">View on GitHub →</a>
+          <a href="https://github.com/lukasvat/Marble-Maze-Mobile.git" target="_blank">View on GitHub →</a>
         </div>
-        <div class="project-card">
-          <h3>Project Three</h3>
-          <p>Coming Soon...</p>
-          <a href="#">View on GitHub →</a>
-      </div>
     </section>
   </main>
 </body>

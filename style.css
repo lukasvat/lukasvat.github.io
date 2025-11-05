@@ -105,6 +105,7 @@ a {
 a:hover, a:focus {
   color: var(--accent-hover);
   text-decoration: none;
+  font-weight: 600;
 }
 
 /* ------------------- */
@@ -143,7 +144,7 @@ header p {
 .project-card {
   background: transparent;
   border-radius: var(--border-radius);
-  border: 1px solid white;
+  border: 3px solid rgba(255,255,255, 0.3);
   padding: 2rem;
   box-shadow: var(--card-shadow);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
