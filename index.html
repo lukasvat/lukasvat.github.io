@@ -3,127 +3,382 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lukas Vatistas | Portfolio</title>
+  <meta name="description" content="Lukas Vatistas — Software Engineer & CS Senior at Indiana University. Building AI-powered full-stack applications.">
+  <title>Lukas Vatistas | Software Engineer</title>
   <link rel="icon" type="image/png" href="Images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="main-card-1" style="padding-top: 5px; padding-bottom: 5px; margin-top: 15px">
-    <h1 style="margin-bottom: 0; color: white; line-height: 1.1;">Lukas Vatistas</h1>
-    <p style="margin-top: 0; color: white;">Computer Science Student at Indiana University<br>
-      <a href="mailto:lukasdvat@gmail.com">lukasdvat@gmail.com</a> · 
-      <a href="tel:+13172922211">(317) 292-2211</a> · 
-      <a href="https://www.linkedin.com/in/lukas-d-vatistas" target="_blank">LinkedIn</a>
-    </p>
+  <!-- Animated background orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">LV</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="mailto:lukasdvat@gmail.com" class="nav-cta">Hire Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="hero" class="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Lukas Vatistas</h1>
+      <p class="hero-subtitle">
+        <span class="typewriter">Software Engineer &amp; CS Senior @ Indiana University</span>
+      </p>
+      <div class="hero-buttons">
+        <a href="mailto:lukasdvat@gmail.com" class="btn btn-primary">Get in Touch</a>
+        <a href="https://www.linkedin.com/in/lukas-d-vatistas" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+        <a href="resume.pdf" download class="btn btn-outline">Download Resume</a>
+      </div>
+      <div class="hero-contact">
+        <a href="mailto:lukasdvat@gmail.com">lukasdvat@gmail.com</a>
+        <span class="sep">·</span>
+        <a href="tel:+13172922211">(317) 292-2211</a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-arrow"></div>
+    </div>
   </header>
 
-  <!-- Main Content -->
   <main>
-    <div style="display:flex; max-width:1165px; gap:20px;">
-      <!-- About Section -->
-      <section id="about" class="main-card-1">
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="glass-card reveal">
         <h2>About Me</h2>
-        <p style="font-size: 16px;">
-          Hi, I’m Lukas, and I’m a senior at Indiana University pursuing a Computer Science major with a specialization in Software Engineering and a minor in Business. For me, software engineering isn't just about writing efficient code—it's about creating elegant solutions that truly make processes easier and more intuitive for people. I'm highly driven by the potential of applied artificial intelligence and full-stack development to solve real-world problems. I have professional experience building complex, AI-powered tools and applications focused on optimizing team performance and automating daily tasks. I believe every line of code should deliver tangible, positive change, and I'm always looking for the next opportunity to innovate.
-        </p>
-      </section>
-
-      <!-- Skills Section-->
-      <section id="about" class="main-card-1">
-        <h2>Technical Skills</h2>
-        <p>
-          <ul>
-            <strong style="font-size: 18px;">Languages</strong>
-            <li>
-              Java, Python, JavaScript, C, SQL, C#, PHP , Swift, HTML/CSS
-            </li>
-          </ul>
-          <ul>
-            <strong style="font-size: 18px;">Frameworks/Libraries</strong>
-            <li>
-              React.js, Node.js, Express.js, Spring Boot, Chart.js
-            </li>
-          </ul>
-          <ul>
-            <strong style="font-size: 18px;">DevOps & Tools</strong>
-            <li>
-              Docker, Kubernetes, Minikube, Linux (Ubuntu), Vagrant, VMWare, Git, Azure, PostgreSQL
-            </li>
-          </ul>
-          <ul>
-            <strong style="font-size: 18px;">Concepts</strong>
-            <li>
-              RESTful APIs, Agile/Scrum, Object-Oriented Programming (OOP), Data Structures & Algorithms
-            </li>
-          </ul>
-        </p>
-      </section>
-    </div>
-    
-
-    <!-- Projects Section -->
-    <section id="projects" class="main-card-1">
-      <h2>Projects</h2>
-      <div>
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div style="line-height: 0.5;">
-            <h3>Daily Update Portal</h3>
-            <Small>PHP, JavaScript, HTML/CSS, SQL - PhpStorm, SSMS, MS Azure</Small>
-          </div>
-          <p class="project-description">
-            Engineered a robust, <strong>full-stack, AI-powered Daily Update Portal</strong> currently scaling to support 
-            <strong>120+ employees</strong>. The application streamlines workflow transparency through 
-            <strong>automated daily task reporting</strong> and a visual <strong>submission heatmap</strong>,
-             while utilizing <strong>CRON jobs</strong> to handle automated email reminders and notifications.
-              By integrating the <strong>OpenAI API via Microsoft Azure</strong>, the system delivers high-level insights,
-               including <strong>auto-generated weekly summaries</strong> for users and <strong>AI-driven productivity scores</strong>
-                with context-aware explanations for managers. Featuring a <strong>secure authentication system</strong> with role-based
-                 access for Admins and Managers, the platform also includes a comprehensive <strong>analytics dashboard</strong> populated
-                  with dynamic graphs to facilitate data-driven trend analysis and team performance comparisons.
-          </p>
-        </div>
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div style="line-height: 0.5;">
-            <h3>Midnight Snack</h3>
-            <Small>C# - Unity</Small>
-          </div>
-          <p>
-              <strong>Midnight Snack</strong> is a <strong>3D first-person horror game</strong>
-              that transforms a late-night gas station visit into a terrifying experience by employing a <strong>low-poly dark
-              realism art style</strong> to build suspense and an unsettling atmosphere.
-              The project heavily utilizes <strong>scripted events with conditionals and event counters</strong> 
-              to drive the linear horror sequence. Core technical features include a robust <strong>first-person
-              player controller with WASD movement</strong> and the implementation of <strong>interactive game
-              objects</strong>. The climax involves creating a monster with pathfinder AI for the final chase sequence.
-          </p>
-          <a href="https://github.com/lukasvat/MidnightSnack.git" target="_blank" style="margin-right:10px">View on GitHub →</a>
-          <a href="https://lukolegend.itch.io/midnight-snack" target="_blank">Play on Itch.io →</a>
-        </div>
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div style="line-height: 0.5;">
-            <h3 style>Marble Maze Mobile</h3>
-            <small>Swift - Xcode</small>
-          </div>
-          <p>
-            <strong>Marble Maze Mobile</strong> is a 2D labyrinth game for iOS where players use intuitive <strong>
-            tilt controls</strong> to navigate a ball through a maze. This project showcases a clean <strong>
-            Model-View-Controller (MVC)</strong> architecture and integrates key Apple frameworks to deliver a
-            complete user experience. <strong>CoreMotion</strong> is leveraged to translate the
-            device's physical tilt into in-game movement, while <strong>SpriteKit</strong>
-            powers the 2D graphics, animation, and physics-based collision detection. For
-            robust data persistence, <strong>Core Data</strong> is implemented to save all player statistics,
-            high scores, and <strong>customization settings</strong>, ensuring a continuous and personalized
-            experience across sessions.
-          </p>
-          <a href="https://github.com/lukasvat/Marble-Maze-Mobile.git" target="_blank">View on GitHub →</a>
-        </div>
+        <p>Hi, I'm Lukas — a senior at Indiana University pursuing a Computer Science degree with a specialization in Software Engineering and a minor in Business. For me, software engineering isn't just about writing efficient code — it's about creating elegant solutions that make processes easier and more intuitive for people. I'm passionate about applied artificial intelligence and full-stack development as tools for solving real-world problems. I have professional experience building complex, AI-powered applications focused on optimizing team performance and automating daily workflows. I believe every line of code should deliver tangible, positive change, and I'm always looking for the next opportunity to innovate.</p>
+      </div>
     </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="glass-card reveal">
+        <h2>Education</h2>
+        <div class="edu-entry">
+          <div class="edu-header">
+            <div>
+              <h3 class="edu-school">Indiana University, Bloomington</h3>
+              <p class="edu-school-sub">Luddy School of Informatics, Computing, and Engineering</p>
+              <p class="edu-degree">B.S. Computer Science &nbsp;·&nbsp; Specialization: Software Engineering &nbsp;·&nbsp; Minor: Business</p>
+            </div>
+            <div class="edu-meta">
+              <span class="edu-gpa">GPA 3.7 / 4.0</span>
+              <span class="edu-date">May 2026</span>
+            </div>
+          </div>
+          <div class="edu-details">
+            <div class="edu-block">
+              <p class="edu-block-label">Honors</p>
+              <div class="badges">
+                <span class="badge badge-gold">Hutton Honors College</span>
+                <span class="badge badge-gold">Hudson &amp; Holland Scholar</span>
+                <span class="badge badge-gold">Provost Scholar</span>
+                <span class="badge badge-gold">Nat'l Society of Collegiate Scholars</span>
+              </div>
+            </div>
+            <div class="edu-block">
+              <p class="edu-block-label">Relevant Coursework</p>
+              <div class="coursework-grid">
+                <div class="coursework-sub">
+                  <p class="coursework-sub-label">Computer Science</p>
+                  <div class="badges">
+                    <span class="badge">Data Structures</span>
+                    <span class="badge">Applied Algorithms</span>
+                    <span class="badge">Discrete Structures</span>
+                    <span class="badge">Software Systems</span>
+                    <span class="badge">Object-Oriented Software Methods</span>
+                    <span class="badge">Mobile App Development</span>
+                    <span class="badge">Database Concepts</span>
+                    <span class="badge">Machine Learning</span>
+                    <span class="badge">Game Programming</span>
+                    <span class="badge">Statistical Inference</span>
+                    <span class="badge badge-cyan">Distributed Systems ✦</span>
+                    <span class="badge badge-cyan">Software Engineering ✦</span>
+                    <span class="badge badge-cyan">Intro to Artificial Intelligence ✦</span>
+                  </div>
+                </div>
+                <div class="coursework-sub">
+                  <p class="coursework-sub-label">Business</p>
+                  <div class="badges">
+                    <span class="badge badge-blue">Foundations of Accounting</span>
+                    <span class="badge badge-blue">The Computer in Business</span>
+                    <span class="badge badge-blue">Legal Environment of Business</span>
+                    <span class="badge badge-blue">Intro Financial Management</span>
+                    <span class="badge badge-blue">New Venture Management</span>
+                    <span class="badge badge-blue">Managing &amp; Behavior in Organizations</span>
+                  </div>
+                </div>
+              </div>
+              <p class="coursework-note">✦ In Progress — Spring 2026</p>
+            </div>
+            <div class="edu-block">
+              <p class="edu-block-label">Study Abroad</p>
+              <p class="edu-abroad">College Year in Athens (CYA) &nbsp;·&nbsp; Athens, Greece</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="glass-card reveal">
+        <h2>Experience</h2>
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role">IT Intern <span class="exp-arrow">→</span> Application Developer</h3>
+              <p class="exp-company">DMC Insurance &nbsp;·&nbsp; Fishers, IN</p>
+            </div>
+            <div class="exp-right">
+              <span class="exp-badge">Sole intern retained out of 7</span>
+              <span class="exp-date">May 2025 – Present</span>
+            </div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Transitioned to a developer role following a successful internship — selected as the sole intern (out of seven) to continue collaborating while completing degree.</li>
+            <li>Operated within an Agile development lifecycle, participating in stand-ups and pivoting development priorities to adapt to changing business needs.</li>
+            <li>Conducted live technical demonstrations and progress presentations for department managers and executives to gather stakeholder feedback and ensure product alignment.</li>
+            <li>Collaborated with the IT team to integrate the Daily Update Portal into existing company infrastructure, ensuring compliance with internal security standards.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="glass-card reveal">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h4 class="skill-label">Languages</h4>
+            <div class="badges">
+              <span class="badge">Java</span>
+              <span class="badge">Python</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">C</span>
+              <span class="badge">SQL</span>
+              <span class="badge">C#</span>
+              <span class="badge">PHP</span>
+              <span class="badge">Swift</span>
+              <span class="badge">HTML / CSS</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4 class="skill-label">Frameworks &amp; Libraries</h4>
+            <div class="badges">
+              <span class="badge badge-blue">React.js</span>
+              <span class="badge badge-blue">Node.js</span>
+              <span class="badge badge-blue">Express.js</span>
+              <span class="badge badge-blue">Spring Boot</span>
+              <span class="badge badge-blue">Chart.js</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4 class="skill-label">DevOps &amp; Tools</h4>
+            <div class="badges">
+              <span class="badge badge-green">Docker</span>
+              <span class="badge badge-green">Kubernetes</span>
+              <span class="badge badge-green">Linux (Ubuntu)</span>
+              <span class="badge badge-green">Git</span>
+              <span class="badge badge-green">Azure</span>
+              <span class="badge badge-green">PostgreSQL</span>
+              <span class="badge badge-green">Vagrant</span>
+              <span class="badge badge-green">VMWare</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4 class="skill-label">Concepts</h4>
+            <div class="badges">
+              <span class="badge badge-purple">RESTful APIs</span>
+              <span class="badge badge-purple">Agile / Scrum</span>
+              <span class="badge badge-purple">OOP</span>
+              <span class="badge badge-purple">Data Structures &amp; Algorithms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="glass-card reveal">
+        <h2>Projects</h2>
+        <div class="projects-list">
+
+          <!-- Project 1 -->
+          <div class="project-card reveal">
+            <div class="project-top">
+              <div>
+                <h3 class="project-title">Daily Update Portal</h3>
+                <div class="project-tags">
+                  <span class="tag">PHP</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">SQL</span>
+                  <span class="tag">HTML / CSS</span>
+                  <span class="tag">Azure</span>
+                  <span class="tag">OpenAI API</span>
+                </div>
+              </div>
+              <span class="project-stat">120+ Users</span>
+            </div>
+            <p class="project-desc">
+              Engineered a robust, <strong>full-stack AI-powered Daily Update Portal</strong> scaling to support
+              <strong>120+ employees</strong>. Streamlines workflow transparency through automated task reporting and
+              a visual <strong>submission heatmap</strong>, with <strong>CRON jobs</strong> handling automated email
+              reminders and notifications. Integrates the <strong>OpenAI API via Microsoft Azure</strong> to deliver
+              auto-generated weekly summaries and <strong>AI-driven productivity scores</strong> with context-aware
+              explanations. Features role-based access control for Admins and Managers, plus a comprehensive
+              <strong>analytics dashboard</strong> with dynamic graphs for data-driven performance analysis.
+            </p>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card reveal">
+            <div class="project-top">
+              <div>
+                <h3 class="project-title">ClashPro AI</h3>
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">Express</span>
+                  <span class="tag">HTML / CSS</span>
+                  <span class="tag">Clash Royale API</span>
+                </div>
+              </div>
+            </div>
+            <p class="project-desc">
+              Architected a <strong>full-stack dashboard</strong> that fetches real-time data via the
+              <strong>Clash Royale API</strong> to visualize player and clan statistics. Developed an algorithm
+              to process and feed that data into an <strong>AI API</strong> to generate personalized strategy tips
+              for users. Deployed and hosted the live application, integrating <strong>advertisements to generate
+              revenue</strong> and offset ongoing API usage costs.
+            </p>
+          </div>
+
+          <!-- Project 3: Midnight Snack -->
+          <div class="project-card reveal">
+            <div class="project-top">
+              <div>
+                <h3 class="project-title">Midnight Snack</h3>
+                <div class="project-tags">
+                  <span class="tag">C#</span>
+                  <span class="tag">Unity</span>
+                  <span class="tag">3D</span>
+                  <span class="tag">Game Dev</span>
+                </div>
+              </div>
+            </div>
+            <p class="project-desc">
+              A <strong>3D first-person horror game</strong> set inside a late-night gas station. Built with a
+              <strong>low-poly dark realism art style</strong> to build suspense and atmosphere, featuring
+              scripted horror sequences driven by conditionals and event counters. Core features include a full
+              <strong>FPS player controller</strong> with WASD movement, interactive game objects, and a
+              <strong>monster with pathfinder AI</strong> powering the climactic chase sequence.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/lukasvat/MidnightSnack.git" target="_blank" rel="noopener" class="btn-sm">GitHub →</a>
+              <a href="https://lukolegend.itch.io/midnight-snack" target="_blank" rel="noopener" class="btn-sm btn-sm-purple">Play on Itch.io →</a>
+            </div>
+          </div>
+
+          <!-- Project 4: Marble Maze Mobile -->
+          <div class="project-card reveal">
+            <div class="project-top">
+              <div>
+                <h3 class="project-title">Marble Maze Mobile</h3>
+                <div class="project-tags">
+                  <span class="tag">Swift</span>
+                  <span class="tag">Xcode</span>
+                  <span class="tag">iOS</span>
+                  <span class="tag">SpriteKit</span>
+                </div>
+              </div>
+            </div>
+            <p class="project-desc">
+              A 2D iOS labyrinth game where players use intuitive <strong>tilt controls</strong> to navigate a
+              ball through a maze. Built on a clean <strong>MVC architecture</strong>, leveraging
+              <strong>CoreMotion</strong> for device tilt input, <strong>SpriteKit</strong> for physics-based
+              collision detection and rendering, and <strong>Core Data</strong> for persistent high scores,
+              player stats, and customization settings across sessions.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/lukasvat/Marble-Maze-Mobile.git" target="_blank" rel="noopener" class="btn-sm">GitHub →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2025 Lukas Vatistas</p>
+      <div class="footer-links">
+        <a href="mailto:lukasdvat@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/lukas-d-vatistas" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/lukasvat" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal via IntersectionObserver
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Smooth scroll + close mobile nav on anchor click
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        document.getElementById('nav-toggle').checked = false;
+      });
+    });
+
+    // Deepen navbar bg on scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+  </script>
+
 </body>
 </html>
