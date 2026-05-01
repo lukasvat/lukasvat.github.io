@@ -633,6 +633,18 @@ strong { color: var(--c-text); font-weight: 600; }
   box-shadow: 0 8px 26px rgba(192, 132, 252, 0.32);
 }
 
+.project-private {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--c-text-sub);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+}
+
 /* =============================================
    Education
    ============================================= */
